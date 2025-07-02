@@ -4,8 +4,9 @@ import Todocontroller from '../controllers/Todocontroller';
 const router = express.Router();
 
 router.get('/get-all', Todocontroller.getalltodo);
-router.post('/add-data', Todocontroller.createTodo);
-router.put('/:id', Todocontroller.updatetodo);
+router.post('/adddata', Todocontroller.createTodo);
+router.put('/complete:id', Todocontroller.updatetodo);
 router.delete('/:id', Todocontroller.deleteUser);
+router.put('/updatedata', Todocontroller.update);
 
 export default router;
